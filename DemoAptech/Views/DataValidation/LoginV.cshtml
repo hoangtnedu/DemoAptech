@@ -1,0 +1,53 @@
+﻿@model DemoAptech.Models.UserValidate
+@{
+    ViewBag.Title = "LoginV";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>LoginV</h2>
+
+
+@{
+    ViewBag.Title = "User Form Validation";
+}
+<h2>User Form</h2>
+@using (Html.BeginForm())
+{
+    @Html.ValidationSummary(true)
+    <div>
+        @Html.LabelFor(model => model.Name)
+    </div>
+    <div>
+        @Html.EditorFor(model => model.Name)
+        @Html.ValidationMessageFor(model => model.Name)
+    </div>
+    <div>
+        @Html.LabelFor(model => model.Password)
+    </div>
+    <div>
+        @Html.EditorFor(model => model.Password)
+        @Html.ValidationMessageFor(model => model.Password)
+    </div>
+    <div>
+        @Html.LabelFor(model => model.ReenterPassword)
+    </div>
+    <div>
+        @Html.EditorFor(model => model.ReenterPassword) 
+        @Html.ValidationMessageFor(model => model.ReenterPassword)
+    </div>
+    <div>
+        @Html.LabelFor(model => model.Age)
+    </div>
+    @Html.EditorFor(model => model.Age) 
+    @Html.ValidationMessageFor(model => model.Age)
+    <div>
+        @Html.LabelFor(model => model.Email)
+    </div>
+    <div>
+        @Html.EditorFor(model => model.Email) 
+        @Html.ValidationMessageFor(model => model.Email)
+    </div>
+    <p>
+        <input type="submit" value="Submit" />
+    </p>
+}

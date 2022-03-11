@@ -1,0 +1,31 @@
+﻿@model DemoAptech.Models.Login
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Index</title>
+</head>
+<body>
+    @using (Html.BeginForm())
+    {
+        @Html.ValidationSummary(true)
+        <div>
+            @Html.LabelFor(model => model.userName)
+        </div> <div>
+            @Html.EditorFor(model => model.userName)
+        </div> <div>
+            @Html.LabelFor(model => model.password)
+        </div> <div>
+            @Html.EditorFor(model => model.password)
+        </div>
+        <div>
+            <input type="submit" value="Submit" />
+        </div>
+    }
+</body>
+</html>

@@ -1,0 +1,35 @@
+﻿@model DemoAptech.Models.User
+@{
+    ViewBag.Title = "Email";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Email</h2>
+
+@using (Html.BeginForm())
+{
+    @Html.ValidationSummary(true)
+    <div>
+        @Html.LabelFor(model => model.Id)
+    </div> <div>
+        @Html.EditorFor(model => model.Id)
+    </div>
+    <div>
+        @Html.LabelFor(model => model.name)
+    </div> <div>
+        @Html.EditorFor(model => model.name)
+    </div>
+    <div>
+        @Html.LabelFor(model => model.address)
+    </div> <div>
+        @Html.EditorFor(model => model.address)
+    </div>
+    <div>
+        @Html.LabelFor(model => model.email)
+    </div> <div>
+        @Html.EditorFor(model => model.email)
+    </div>
+    <div>
+        <input type="submit" value="Submit" />
+    </div>
+}
